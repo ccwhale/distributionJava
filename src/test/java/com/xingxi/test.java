@@ -2,6 +2,10 @@ package com.xingxi;
 
 import junit.framework.TestCase;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -28,5 +32,16 @@ public class test extends TestCase {
 
         }
        System.out.print(getNickName("hhh").orElse("默认值"));
+    }
+
+    public void testDate(){
+        LocalTime localTime = LocalTime.of(0,0,0);
+        LocalDate localDate = LocalDate.of(1975,4,1);
+        ZonedDateTime zonedDateTime = ZonedDateTime.of(localDate,localTime, ZoneId.of("Asia/Taipei"));
+
+        System.out.print(zonedDateTime);
+        System.out.print(zonedDateTime.toEpochSecond());
+        System.out.print(zonedDateTime.toInstant().toEpochMilli());
+
     }
 }
