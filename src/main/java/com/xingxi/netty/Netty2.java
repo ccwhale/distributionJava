@@ -1,5 +1,7 @@
 package com.xingxi.netty;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @author xingxi
  * @date 2019-03-01 17:08:52 星期五

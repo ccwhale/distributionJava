@@ -58,7 +58,7 @@ public class JedisTest extends TestCase {
     }
 
     public void testInstant(){
-        Instant instant = Instant.now().plusMillis(TimeUnit.HOURS.toMillis(8));
+        Instant instant = Instant.now().plusMillis(TimeUnit.HOURS.toMillis(12));
         System.out.println(instant.getEpochSecond());
         System.out.println(instant.toEpochMilli());
         System.out.println(System.currentTimeMillis());
