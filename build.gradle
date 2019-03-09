@@ -20,5 +20,8 @@ ext{
 dependencies {
     compile "org.projectlombok:lombok:1.16.12"
     compile 'io.netty:netty-all:4.1.30.Final'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: "redis.clients",name:"jedis",version:"2.9.0"
     compile "org.springframework.boot:spring-boot-starter-log4j2:$springBootVersion"
+    compile "commons-io:commons-io:2.4"
 }

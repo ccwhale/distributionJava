@@ -14,7 +14,7 @@ import java.util.Optional;
  * @author cc
  * @Date 2019-03-03 23:04:04 Sunday
  */
-public class test extends TestCase {
+public class Test extends TestCase {
 
     private Optional<String> getNickName(String name){
         Map<String,String> nicknames = new HashMap<>();
