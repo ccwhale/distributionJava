@@ -1,7 +1,5 @@
 package com.xingxi.collections.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 
 /**
  * @author cc
@@ -15,7 +13,6 @@ public class Apple extends Fruit {
 
     public Apple() {
     }
-
     @Override
     public String toString() {
         return "Apple";
