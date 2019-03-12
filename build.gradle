@@ -25,3 +25,7 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-log4j2:$springBootVersion"
     compile "commons-io:commons-io:2.4"
 }
+
+task sourceJar(type: Jar) {
+    from sourceSets.main.allJava
+}
