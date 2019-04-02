@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -59,6 +60,14 @@ public class javase extends TestCase {
 //    }
 
     public void testLog(){
-
+        Random random = new Random();
+        log.info("nextLong:{}",random.nextLong());
+        log.info("nextLong:{}",random.nextLong());
+        log.info("nextLong:{}",random.nextLong());
+        log.info("nextLong:{}",random.nextLong());
+        log.info("nextInt:{}",random.nextInt());
+        log.info("nextInt:{}",random.nextInt());
+        log.info("nextInt:{}",random.nextInt());
+        log.info("nextInt:{}",random.nextInt(200));
     }
 }

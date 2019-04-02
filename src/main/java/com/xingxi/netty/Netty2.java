@@ -26,6 +26,23 @@ import lombok.extern.slf4j.Slf4j;
  * git rm -r --cache . #当前目录下的缓存删除 之前绿色的文件都变成红色的了
  * git add . #将当前目录下的文件加入到暂存区.被过滤掉的文件就不会再git status中显示了
  *
+ * 第四个操作:
+ * 两个分支合到master分支上会有冲突
+ * 我想把另一个分支的功能合过来解决冲突
+ *
+ * 合并分支的时候有冲突: Git不会自动创建提交,没有冲突的文件在暂存区(to be commited)有冲突的文件在工作区
+ * 问题:另一个分支的提交的记录(另一个作者commit的注释等等内容)是不是就不会合并到当前分支了
+ *
+ * 大佬说这样不行,一个分支一个内容,有问题的时候好通过分支去发现问题
+ *
+ * 然后:
+ * 有冲突的文件在工作区: git checkout *
+ * 没有冲突的文件在暂存区: git reset HEAD * (暂存区的文件重新回到工作区)
+ * 工作区的文件撤销修改: git checkout -- *
+ *
+ * 已经commit的内容想回退:git reset --hard "HEAD^" 回退上上个版本(内容会丢失,只能从IDEA的localHistory中获取数据了)
+ *
+ *
  */
 public class Netty2 {
 

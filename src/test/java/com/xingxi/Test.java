@@ -1,7 +1,13 @@
 package com.xingxi;
 
+import com.xingxi.websocket.Person;
 import junit.framework.TestCase;
+import lombok.extern.slf4j.Slf4j;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZoneId;
@@ -14,6 +20,7 @@ import java.util.Optional;
  * @author cc
  * @Date 2019-03-03 23:04:04 Sunday
  */
+@Slf4j
 public class Test extends TestCase {
 
     private Optional<String> getNickName(String name){
@@ -43,5 +50,11 @@ public class Test extends TestCase {
         System.out.print(zonedDateTime.toEpochSecond());
         System.out.print(zonedDateTime.toInstant().toEpochMilli());
 
+    }
+
+    public void testReverse() throws IOException, ClassNotFoundException {
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File("D:\\xingxi")));
+        Person person = (Person)ois.readObject();
+        log.info("读取的数据:{}",person.getName());
     }
 }

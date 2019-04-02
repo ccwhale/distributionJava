@@ -38,7 +38,21 @@ public class MapTest extends TestCase {
             // 处理apple的数据
         });
         // 想同时获得key和value
-        // forEach(map.entrySet());
+        forEach(map.entrySet());
+        for(Map.Entry<String,String> entry :map.entrySet()){
+            // 获得key
+            entry.getKey();
+            // 获得value
+            entry.getValue();
+        }
+        // 返回Set<String>
+        for(String key : map.keySet()){
+
+        }
+        //返回 Collection<String>
+        for(String value : map.values()){
+
+        }
 
         // 语句lambda 可以 表达式lambda
         map.forEach((key,value)-> {
@@ -73,4 +87,6 @@ public class MapTest extends TestCase {
         });
         log.info("sort:{}",words);
     }
+
+
 }
