@@ -6,6 +6,9 @@ import com.xingxi.collections.entity.Fruit;
 import junit.framework.TestCase;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 /**
  * @author cc
  * @Date 2019-03-11 23:29:29 Monday
@@ -39,5 +42,15 @@ public class CollectionTest extends TestCase {
         // Node<Banana> node = fruitNode;
         Node<? super Banana> node = fruitNode;
         Node<? super Apple> node1 = fruitNode;
+    }
+
+    public void testDequeue(){
+        Deque<Integer> stack = new LinkedList<>();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        log.info("弹出:{}",stack.pop());
+        log.info("弹出:{}",stack.pop());
+        log.info("弹出:{}",stack.pop());
     }
 }
