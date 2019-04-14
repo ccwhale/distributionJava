@@ -57,4 +57,11 @@ public class Test extends TestCase {
         Person person = (Person)ois.readObject();
         log.info("读取的数据:{}",person.getName());
     }
+
+    //"startId":3116007443,"endId":3955749226,"steps":2000}
+    // 839741783
+    // 419870 要执行41万次
+    public void testMinus(){
+        System.out.println(3118493443L-3116007443L);
+    }
 }
