@@ -83,7 +83,7 @@ public class JedisTest extends TestCase {
     // 获取今天的shipweek
     public void testWeek() throws ParseException {
         try {
-            int weeksInWeekYear = DateUtils.toCalendar(DateUtils.parseDate("2019-03-31","yyyy-MM-dd")).get(Calendar.WEEK_OF_YEAR);
+            int weeksInWeekYear = DateUtils.toCalendar(DateUtils.parseDate("2019-01-27","yyyy-MM-dd")).get(Calendar.WEEK_OF_YEAR);
             String year = "2017" + (weeksInWeekYear>9 ? weeksInWeekYear : ("0" + weeksInWeekYear));
             System.out.println(NumberUtils.toInt(year));
         } catch (ParseException e) {

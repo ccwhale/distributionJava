@@ -30,11 +30,15 @@ public class JfreeTest {
      */
     public static void main(String[] args) {
         // 步骤1：创建CategoryDataset对象（准备数据）
-        CategoryDataset dataset = createDataset();
+        CategoryDataset dataset = createDataset1();
         // 步骤2：根据Dataset 生成JFreeChart对象，以及做相应的设置
         JFreeChart freeChart = createChart(dataset);
         // 步骤3：将JFreeChart对象输出到文件，Servlet输出流等
+
         saveAsFile(freeChart, "D:\\2.jpg", 2500, 800);
+
+        saveAsFile(freeChart, "/Users/cc/Desktop/1.jpg", 2500, 800);
+
     }
 
     // 保存为文件

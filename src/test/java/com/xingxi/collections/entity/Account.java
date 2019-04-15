@@ -1,5 +1,6 @@
 package com.xingxi.collections.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.ToString;
 
@@ -9,7 +10,10 @@ import lombok.ToString;
  */
 @Data
 @ToString
+@AllArgsConstructor
 public class Account implements Comparable<Account> {
+
+    private Long id;
 
     private String name;
 
