@@ -5,7 +5,9 @@ import com.xingxi.collections.entity.Banana;
 import com.xingxi.collections.entity.Fruit;
 import junit.framework.TestCase;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Test;
 
+import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -53,4 +55,30 @@ public class CollectionTest extends TestCase {
         log.info("弹出:{}",stack.pop());
         log.info("弹出:{}",stack.pop());
     }
+
+    // double ended queue 双端队列
+    // offer是插入操作 poll是移除操作 poll是弹出不移除操作
+    // https://blog.csdn.net/top_code/article/details/8650729
+    @Test
+    public void testLinkedList(){
+        Deque<Integer> mDeque = new LinkedList<>();
+        for(int i=0;i<5;i++){
+            // offer() linkLast(e)
+            mDeque.offer(i);
+        }
+        // peek() 弹出链表的头结点,但是不溢出
+        log.info("first peek:{}",mDeque.peek());
+        // 遍历
+        for(Integer x :mDeque){
+            System.out.println(x);
+        }
+
+        while (mDeque.peek() != null){
+            // 队列方式遍历,元素逐个被移除
+            // poll() unlinkFirst()
+            System.out.println(mDeque.poll());
+        }
+
+    }
+
 }

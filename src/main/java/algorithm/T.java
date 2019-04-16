@@ -1,4 +1,4 @@
-package algirithm;
+package algorithm;
 
 /**
  * @author cc

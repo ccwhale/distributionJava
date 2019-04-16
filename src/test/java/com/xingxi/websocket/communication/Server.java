@@ -1,6 +1,5 @@
 package com.xingxi.websocket.communication;
 
-import jdk.internal.util.xml.impl.Input;
 import junit.framework.TestCase;
 import lombok.extern.slf4j.Slf4j;
 

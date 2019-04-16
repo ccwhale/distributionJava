@@ -1,4 +1,4 @@
-package algirithm.tree;
+package algorithm.tree;
 
 /**
  * @author cc
