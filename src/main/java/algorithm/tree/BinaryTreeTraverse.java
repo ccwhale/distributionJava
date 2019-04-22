@@ -1,4 +1,4 @@
-package algirithm.tree;
+package algorithm.tree;
 
 import java.util.Deque;
 import java.util.LinkedList;

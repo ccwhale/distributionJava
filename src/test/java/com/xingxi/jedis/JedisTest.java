@@ -83,7 +83,7 @@ public class JedisTest extends TestCase {
     // 获取今天的shipweek
     public void testWeek() throws ParseException {
         try {
-            int weeksInWeekYear = DateUtils.toCalendar(DateUtils.parseDate("2019-03-31","yyyy-MM-dd")).get(Calendar.WEEK_OF_YEAR);
+            int weeksInWeekYear = DateUtils.toCalendar(DateUtils.parseDate("2019-01-27","yyyy-MM-dd")).get(Calendar.WEEK_OF_YEAR);
             String year = "2017" + (weeksInWeekYear>9 ? weeksInWeekYear : ("0" + weeksInWeekYear));
             System.out.println(NumberUtils.toInt(year));
         } catch (ParseException e) {
@@ -117,6 +117,22 @@ public class JedisTest extends TestCase {
         System.out.println(count);
        System.out.println(count1);
         System.out.println(count2);
+    }
+
+    //-- 7923	   134895	10583	32824113	7988	NULL	1774
+    //-- 33019086	NULL	38585	32	        NULL	NULL	38573
+    public void testMinus(){
+        // System.out.println(4020571093L-3144458443L);
+        // 被修改的数据
+        System.out.println(7923+134895+10583+32824113+7988+1774);
+        // 第一天的数据
+        System.out.println(33019086+38585+32+38573);
+
+        //109000
+        System.out.println(33096276-32987276);
+
+        // 17923	134895	10583	32824113	7988	NULL	1774
+        System.out.println(17923+134895+10583+32824113+7988+1774);
     }
 
 
