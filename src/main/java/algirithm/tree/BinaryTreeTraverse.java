@@ -60,7 +60,7 @@ public class BinaryTreeTraverse {
         while (!stack.isEmpty()) {
             TreeNode cur = stack.pop();
             outPut.push(cur.val);
-            // 先压入右节点,进入输出栈,右边节点就在下面
+            // 先压入右节点,进入输出栈,右边节点就在左边的下面
             if(cur.rightNode != null){
                 stack.push(cur.rightNode);
             }
