@@ -1,0 +1,21 @@
+## mysql跟时间相关的函数
+```sql
+-- 根据时间查询
+select year(gmt_created) from `express_order_delay_punish` --返回年
+select time(gmt_created) from `express_order_delay_punish` --返回时间
+select second(gmt_created) from `express_order_delay_punish`--返回秒
+select date(gmt_created) from `express_order_delay_punish`--返回日期部分
+-- 查询月范围的数量: 不需要记住记住每个月有多少天或不需要关心闰年2月的方法
+select * from `express_order_delay_punish` where  year(gmt_created) = 2019 and month(gmt_created) = 4 and day(gmt_created) = 25
+
+SHOW VARIABLES LIKE 'INNODB_VERSION' #5.6.28
+SHOW VARIABLES LIKE  'INNODB_%IO_THREADS' #innodb_read_io_threads 12  innodb_write_io_threads 12 
+SHOW ENGINE INNODB STATUS 
+SELECT VERSION() #5.6.28-cdb2016-log
+SHOW VARIABLES 
+SHOW VARIABLES LIKE 'innodb_buffer_pool_size'#11723079680
+SHOW VARIABLES LIKE 'innodb_buffer_pool_instances'#8
+SELECT POOL_ID,POOL_SIZE,FREE_BUFFERS,DATABASE_PAGES FROM INNODB_BUFFER_POOL_STATUS
+SHOW VARIABLES LIKE 'innodb_old_blocks_pct'#37
+
+```
