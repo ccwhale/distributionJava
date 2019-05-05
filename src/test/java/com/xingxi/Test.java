@@ -12,7 +12,10 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -64,4 +67,23 @@ public class Test extends TestCase {
     public void testMinus(){
         System.out.println(3118493443L-3116007443L);
     }
+
+    public void testQPS(){
+        // 1111
+        System.out.println(4000000/(60*60));
+        // 单纯更新 一分钟处理三万条数据
+    }
+
+    public void testEmptyList(){
+        List<String> list = Collections.emptyList();
+        List<String> list1 = new ArrayList<>();
+        list1.add("123445");
+        list1.add("123445");
+        list1.add("123445");
+        list1.add("123445");
+        list = list1;
+        list.forEach((key)->System.out.println(key));
+    }
+
+
 }

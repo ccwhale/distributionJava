@@ -1,15 +1,8 @@
 package com.xingxi.websocket;
 
-import junit.framework.TestCase;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 /**
@@ -18,10 +11,13 @@ import java.io.Serializable;
  */
 @Data
 @Slf4j
+@AllArgsConstructor
 public class Person implements Serializable {
 
     private static final long serialVersionUID = -171096289253009926L;
     private String name;
+    private int age;
+    private String remark;
 
 //    public static void main(String[] args) throws IOException {
 //        Person person = new Person();

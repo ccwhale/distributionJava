@@ -1,5 +1,8 @@
 package com.xingxi.thread;
 
+import org.apache.commons.lang3.RandomUtils;
+
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -29,6 +32,8 @@ public class ThreadLocalCSDemo {
     private static class Player extends Thread {
         @Override
         public void run() {
+            // RandomUtils.nextInt(1,100)
+            // RANDOM.nextInt(BULLET_NUMBER)获取的随机数每个线程都是一样的.
             Integer bullets = BULLET_NUMBER_THREADLOCAL.get() - RANDOM.nextInt(BULLET_NUMBER);
             Integer killedEnemies = KILLED_NUMBER_THREADLOCAL.get() - RANDOM.nextInt(TOTAL_PLEYERS / 2);
             Integer lifeValue = LIFE_NUMBER_THREADLOCAL.get() - RANDOM.nextInt(LIFE_NUMBER);
