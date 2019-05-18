@@ -14,6 +14,7 @@ import java.util.concurrent.TimeoutException;
 /**
  * @author xingxi
  * @date 2019-05-09 16:28:45 星期四
+ * 先启动consumer
  */
 @Slf4j
 public class RabbitMQConsumer {
@@ -22,7 +23,7 @@ public class RabbitMQConsumer {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         connectionFactory.setUsername("guest");
         connectionFactory.setPassword("guest");
-        connectionFactory.setHost("");
+        connectionFactory.setHost("192.168.21.129");
         connectionFactory.setVirtualHost("/");
 
         Connection connection = connectionFactory.newConnection();
